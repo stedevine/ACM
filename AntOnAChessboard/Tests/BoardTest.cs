@@ -23,7 +23,7 @@
                 try
                 {
                     Board.GetPointAfterStepsTaken(n);
-                    Assert.Fail("Should throw argument out of range exception");
+                    Assert.Fail("Should throw argument out of range exception for value {0}", n);
                 }
                 catch (ArgumentOutOfRangeException e)
                 {
@@ -33,7 +33,7 @@
 
             test(-1);
             test(0);
-            test(200000001);
+            test(2000000001);
         }
 
         [TestMethod]
